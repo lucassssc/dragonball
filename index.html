@@ -1,0 +1,33 @@
+<img src="https://gameoverdrive.com.br/wp-content/uploads/2026/10/st01-02.webp">
+
+<input type="text" placeholder="dragonball" id="img">
+
+<button onclick="destruir()">
+    cadastrar
+</button>
+
+<button onclick="pesquisar()">
+    buscar
+</button>
+
+<script>
+     async function pesquisar () {
+        const dragonball = await fetch('http://localhost:3000/dragonball')
+    }   
+
+    async function destruir () {
+        const imagem = document.getElementById('img').value
+
+        const dragonball = {
+            imagem
+        }
+
+        const resposta = await fetch('http://localhost:3000/dragonball', {
+            method: 'POST',
+            body: JSON.stringify(dragonball),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+    }
+</script>

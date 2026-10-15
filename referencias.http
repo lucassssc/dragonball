@@ -1,0 +1,16 @@
+GET http://localhost:3000/dragonball
+
+
+###
+
+POST http://localhost:3000/dragonball
+Content-Type: application/json
+
+{
+    "nome": "beerus",
+    "genero": "M",
+    "especie": "humanoide felino roxo"
+    "idade": "desconhecido",
+    
+}
+
